@@ -44,7 +44,7 @@ def create_data(folder_path):
                 with open(file_path) as file:
                     content = file.read()
                     documents.append(content)
-                    metadatas.append({"source:": file_name})
+                    metadatas.append({"source": file_name})
                     ids.append(id)
                 id_count += 1
     except Exception as e:
@@ -65,21 +65,21 @@ def add_collection(collection, documents, metadatas, ids):
             metadatas=metadatas,
             ids=ids
             )
-        if collection.count() > 0:
-            print(f"The insertion of the data is successful.")
     except Exception as e:
         print(f"An error occurred while adding to the collection: {e}")
 
-#Find the closest text and return its name from includes
-def find_closest_text(collection, input_query):
+#Find the closest text(s) and return its name from includes. n_results is set to 1 by default.
+def find_closest_texts(collection, input_query, n_results=2):
     try:
-        result = collection.query(
+        closest_text_names = list()
+        results = collection.query(
             query_texts=[input_query],
-            includes = ["source"],
-            n_results=1
+            include=["metadatas"],
+            n_results=n_results
         )
-        closest_text_name = result.includes[0]["source"]
-        return closest_text_name
+        for item in results["metadatas"][0]:
+            closest_text_names.append(item["source"])
+        return closest_text_names
     except Exception as e:
         print(f"An error occurred while finding the closest text: {e}")
 
@@ -87,15 +87,15 @@ def find_closest_text(collection, input_query):
 def main():
     my_collection_name = f"my_collection"
     my_folder_path = f"texts"
-    my_input_query = f"This is a dog"
+    my_input_query = f"This is a cat"
 
     my_absolute_path = get_absolute_path(my_folder_path)
     my_client = create_client()
     my_collection = get_or_create_collection(my_client, my_collection_name)
     my_documents, my_metadatas, my_ids = create_data(my_absolute_path)
     add_collection(my_collection, my_documents, my_metadatas, my_ids)
-    closest_text = find_closest_text(my_collection, my_input_query)
-    print("Closest text:", closest_text)
+    my_closest_texts = find_closest_texts(my_collection, my_input_query)
+    print("Closest text(s):", my_closest_texts)
 
 if __name__ == "__main__":
     main()
