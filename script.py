@@ -20,10 +20,10 @@
         except Exception as e:
             print(f"An error occurred while creating the client: {e}")
         
-    #Create a collection with a given name
-    def create_collection(client, collection_name):
+    #Get or create a collection with a given name
+    def get_or_create_collection(client, collection_name):
         try:
-            collection = client.create_collection(name=collection_name)
+            collection = client.get_or_create_collection(name=collection_name)
             return collection
         except Exception as e:
             print(f"An error occurred while creating the collection: {e}")
@@ -90,7 +90,7 @@
 
         my_relative_path = get_relative_path(my_folder_path)
         my_client = create_client()
-        my_collection = create_collection(my_client, my_collection_name)
+        my_collection = get_or_create_collection(my_client, my_collection_name)
         my_documents, my_metadatas, my_ids = create_data(my_relative_path)
         add_collection(my_collection, my_documents, my_metadatas, my_ids)
         closest_text = find_closest_text(my_collection, my_input_query)
