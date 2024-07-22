@@ -32,7 +32,7 @@
     python main.py
     ```
 
-3. Follow the on-screen prompts to book a table, view the menu, place orders, and process payments.
+3. Follow the on-screen prompts to manage embeddings and search texts.
 
 ## Project Structure
 * **config.py/**:  Contains configuration files.
