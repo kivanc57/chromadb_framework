@@ -11,12 +11,12 @@
 ## Installation
 1. **Clone the repository**: 
     ```bash
-    git clone https://github.com/yourusername/restaurant_management_system.git
+    git clone https://github.com/yourusername/chromadb_framework
     ```
 
 2. **Navigate to the project directory**:  
     ```bash
-    cd restaurant_management_system
+    cd chromadb_framework
     ```
 
 3. **Install any required dependencies (if applicable)**.
@@ -31,10 +31,31 @@
     ```bash
     python main.py
     ```
-
 3. Follow the on-screen prompts to manage embeddings and search texts.
 
 ## Project Structure
+
+```markdown
+📁 project-root
+├── 📁 config
+│ ├── 📄 init.py
+│ └── 📄 constants.py
+│
+├── 📁 src
+│ ├── 📄 init.py
+│ ├── 📄 client.py
+│ ├── 📄 collection.py
+│ └── 📄 data.py
+│
+├── 📁 utils
+│ ├── 📄 init.py
+│ └── 📄 helpers.py
+│
+├── 📄 .gitattributes
+├── 📄 .gitignore
+└── 📄 main.py
+```
+
 * **config.py/**:  Contains configuration files.
   * ***\__init__.py***: Imports constants for model and collection configuration.
   * ***constants.py***: Defines constants used throughout the application.
