@@ -38,21 +38,21 @@
 ```markdown
 📁 project-root
 ├── 📁 config
-│ ├── 📄 init.py
+│ ├── 📄 __init__.py
 │ └── 📄 constants.py
 │
 ├── 📁 src
-│ ├── 📄 init.py
+│ ├── 📄 __init__.py
 │ ├── 📄 client.py
 │ ├── 📄 collection.py
 │ └── 📄 data.py
 │
 ├── 📁 utils
-│ ├── 📄 init.py
+│ ├── 📄 __init__.py
 │ └── 📄 helpers.py
 │
-├── 📄 .gitattributes
 ├── 📄 .gitignore
+├── 📄 .gitattributes
 └── 📄 main.py
 ```
 
@@ -72,10 +72,10 @@
 
 * **.gitignore**: Specifies files and directories to be ignored by Git (e.g., virtual environments, build artifacts).
 * **.gitattributes**: Ensures consistent line endings across different operating systems in the repository.
+* **main.py**: The entry point of the application. Initializes settings, handles embedding operations, and manages text searches.
 
 ## Code Examples
 ### Main Program
-**main.py**: The entry point of the application. Initializes settings, handles embedding operations, and manages text searches.
 
 ```python
 from config.constants import MODEL_NAME, COLLECTION_NAME, INPUT_QUERY
