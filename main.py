@@ -1,7 +1,7 @@
 from config.constants import MODEL_NAME, COLLECTION_NAME, INPUT_QUERY
-from chroma.client import get_client
-from chroma.collection import get_or_create_collection, add_collection, find_closest_texts
-from chroma.data import get_data
+from src.client import get_client
+from src.collection import get_or_create_collection, add_collection, find_closest_texts
+from src.data import get_data
 from utils.helpers import set_def_llm, get_path
 
 def main():
