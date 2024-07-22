@@ -1,1 +1,0 @@
-Create a Python program that searches the specified directory for the text file most similar to the user's text query based on semantics.
