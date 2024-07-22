@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
+# Set all text files to use LF for line endings in the repository
 * text=auto
