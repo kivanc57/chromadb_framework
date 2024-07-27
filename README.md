@@ -209,6 +209,12 @@ def get_data(folder_path):
         return [], [], []
 
 ```
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](https://github.com/kivanc57/chromadb_framework/blob/main/LICENSE) file for details.
+
+
 ## Contact
 Let me know if there are any specific details you’d like to adjust or additional sections you want to include!  
 * **Email**: kivancgordu@hotmail.com
