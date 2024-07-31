@@ -15,7 +15,7 @@ logger.info("Package is initialized")
 
 
 __version__ = "1.0.0"
-__date__ = "22-06-2024"
+__date__ = "22-07-2024"
 __email__ = "kivancgordu@hotmail.com"
 __status__ = "production"
 
