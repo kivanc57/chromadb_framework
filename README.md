@@ -3,10 +3,13 @@
 **Chroma Framework** is a Python-based application designed to manage and search text embeddings using a sentence transformer model. The framework enables users to create collections of text embeddings, add new documents, and query the closest texts based on input queries.
 
 ## Features
-* **Embedding Management**: Create and manage collections of text embeddings.
-* **Document Addtion**: Add new documents to the collection with metadata.
-* **Text Search**: Find the closest texts to a given query using the embedding model.
-* **Dynamic Path Handling**: Automatically determine file paths relative to the project directory.
+⛩️ **Embedding Management** ⛩️ -> Create and manage collections of text embeddings.
+
+📝 **Document Addtion** 📝 -> Add new documents to the collection with metadata.
+
+🔎 **Text Search** 🔍 -> Find the closest texts to a given query using the embedding model.
+
+🚨 **Dynamic Path Handling** 🚨 -> Automatically determine file paths relative to the project directory.
 
 ## Installation
 1. **Clone the repository**: 
